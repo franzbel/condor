@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hours: 1
+  minutes: 1
+  seconds: 1
+  total: 1.5
+
+two:
+  hours: 1
+  minutes: 1
+  seconds: 1
+  total: 1.5

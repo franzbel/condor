@@ -1,0 +1,10 @@
+<%= form_for @flight  do |f|%>
+    <%= f.label(:hours, "Horas") %>
+    <%= f.number_field(:hours) %>
+    <%= f.label(:minutes, "Minutos") %>
+    <%= f.number_field(:minutes) %>
+    <%= f.label(:seconds, "Segundos") %>
+    <%= f.number_field(:seconds) %>
+    <%= f.submit(:Enviar) %>
+<% end %>
+<%= link_to("Indice", flights_path) %>

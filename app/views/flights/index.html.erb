@@ -1,0 +1,5 @@
+<h5>Total de horas voladas</h5>
+<% @flights.each do |flight| %>
+    <%= flight.total %><br>
+<% end %>
+<%= link_to("Nuevo vuelo", new_flight_path) %>
