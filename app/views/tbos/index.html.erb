@@ -1,0 +1,37 @@
+<h3>Lista de TBOs</h3>
+<table>
+  <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Numero de parte</th>
+        <th>Tbo</th>
+        <th>Tiempo transcurrido</th>
+        <th>Tiempo restante</th>
+        <th>Editar</th>
+        <th>Borrar</th>
+        <th>Mostrar</th>
+      </tr>
+  </thead>
+  <tbody>
+    <% @tbos.each do |tbo| %>
+        <tr>
+          <td><%= tbo.name %></td>
+          <td><%= tbo.part_number %></td>
+          <td><%= tbo.tbo %></td>
+          <td><%= tbo.elapsed_time %></td>
+          <td><%= tbo.remaining_time %></td>
+          <td><%= link_to("Etitar", edit_tbo_path(tbo)) %></td>
+          <td><%= link_to("Borrar", tbo_path(tbo), method: :delete) %></td>
+          <td><%= link_to("Mostrar", tbo_path(tbo)) %></td>
+          <td></td>
+          <td></td>
+        </tr>
+  <% end %>
+  </tbody>
+</table>
+<%= link_to("Nuevo TBO", new_tbo_path ) %>
+
+
+
+
+

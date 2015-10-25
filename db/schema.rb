@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151021234617) do
+ActiveRecord::Schema.define(version: 20151022061722) do
 
   create_table "flights", force: :cascade do |t|
     t.float    "hours"
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 20151021234617) do
     t.float    "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "tbos", force: :cascade do |t|
+    t.string   "name"
+    t.string   "part_number"
+    t.float    "tbo"
+    t.float    "elapsed_time"
+    t.float    "remaining_time"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end

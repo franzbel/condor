@@ -31,6 +31,14 @@ class FlightsController < ApplicationController
     flight.save
     redirect_to flight_path(flight)
   end
+
+  def destroy
+    # render(:text=>params)
+    flight = Flight.find(params[:id])
+    flight.destroy
+    redirect_to flights_path
+  end
+
   protected
   def flight_params
     params.require(:flight).permit(:hours, :minutes, :seconds, :total)

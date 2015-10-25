@@ -1,0 +1,15 @@
+<%= form_for @tbo do |f| %>
+    <%= f.label(:name, "Componente") %>
+    <%= f.text_field(:name) %> <br>
+
+    <%= f.label(:part_number, "Numero de parte") %>
+    <%= f.text_field(:part_number) %> <br>
+
+    <%= f.label(:tbo, "TBO") %>
+    <%= f.number_field(:tbo) %> <br>
+
+    <%= f.submit(:Guardar) %>
+
+<% end %>
+
+<%= link_to("Lista de TBOs", tbos_path) %>

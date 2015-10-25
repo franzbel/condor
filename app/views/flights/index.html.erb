@@ -1,5 +1,28 @@
-<h5>Total de horas voladas</h5>
-<% @flights.each do |flight| %>
-    <%= flight.total %><br>
-<% end %>
+<table>
+  <thead>
+    <tr>
+      <th>Horas</th>
+      <th>Minutos</th>
+      <th>Segundos</th>
+      <th>Total</th>
+      <th>Editar</th>
+      <th>Mostrar</th>
+      <th>Borrar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @flights.each do |flight| %>
+        <tr>
+          <td><%= flight.hours %></td>
+          <td><%= flight.minutes %></td>
+          <td><%= flight.seconds %></td>
+          <td><%= flight.total %></td>
+          <td><%= link_to("Editar", edit_flight_path(flight)) %></td>
+          <td><%= link_to("Mostrar", flight_path(flight)) %></td>
+          <td><%= link_to("Borrar", flight_path(flight), method: :delete) %></td>
+        </tr>
+  <% end %>
+  </tbody>
+</table>
+
 <%= link_to("Nuevo vuelo", new_flight_path) %>

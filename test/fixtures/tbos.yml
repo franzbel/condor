@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  part_number: MyString
+  tbo: 1.5
+  elapsed_time: 1.5
+  remaining_time: 1.5
+
+two:
+  name: MyString
+  part_number: MyString
+  tbo: 1.5
+  elapsed_time: 1.5
+  remaining_time: 1.5
